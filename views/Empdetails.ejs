@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript" href="../public/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<form action="/find" method="GET">
+	<a  href="/"><button class="home">Back TO Home</button></a>
+    <!-- < --><!-- div class="container bgcolor row">
+		   	<form action="/findsingleuser" method="GET">
+				<h3>Enter Employee ID To Search: -</h3>
+				<div>
+				<label>ID:</label>
+				<input type="number" name="id" id="id" placeholder="Enter Id to search.." />
+				<input class="findsingleuser" type="submit" value="Search" />
+				</div>
+	        </form>
+        </div>
+        
+        <div class="container bgcolor row">
+		   	<form action="/deletesingleuser" method="GET">
+				<h3>Enter Employee ID To Delete: -</h3>
+				<div>
+				<label>ID:</label>
+				<input type="number" name="id" id="id" placeholder="Enter Id to Delete.." />
+				<input class="delete" type="submit" value="Delete" />
+				</div>
+	        </form>
+        </div>
+
+        <div class="container bgcolor row">
+		   	<form action="/updateuser" method="GET">
+				<h3>If u want to update any Employee Detail please Enter the Name: -</h3>
+				<div>
+				<label>Name:</label>
+				<input type="text" name="name"  placeholder="Enter Name to update.." />
+				<input class="update" type="submit" value="Updateuser" />
+				</div>
+	        </form>
+        </div> -->
+
+	<h2>Employee Details</h2>
+	<div>
+		<table border="1" bgcolor="lightblue">
+			<tr>
+				<th>Name</th>
+				<th>Id</th>
+				<th>Age</th>
+				<th>Salary</th>
+				<th>phone</th>
+			</tr>
+				<% for(var i=0; i < userdata.length; i++) { %>
+				
+			<tr>
+			<td><%= userdata[i].name %></td>
+				<td><%= userdata[i].id %></td>
+				<td><%= userdata[i].age %></td>
+				<td><%= userdata[i].salary %></td>
+				<td><%= userdata[i].phone %></td>
+			</tr>
+				<% } %>
+			
+		</table>
+	</div>
+    </form>
+	<style type="text/css">
+	.bgcolor{
+		background-color: lightblue;
+	}
+		.home{
+			position: absolute;
+    		margin-left: 70rem;
+            background-color: #FFB6C1;
+    		color: red;
+            font-size: 20px;
+            width: 15%;
+            height: 40px;
+    	}
+		
+	</style>
+</body>
+
+</html>

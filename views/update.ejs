@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Database</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/css/style.css">
+	<script type="text/javascript" href="../public/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container row">
+		<div class="jumbotron col-sm-4 pull-center">
+			<form action="/update" method="GET">
+				<h3>Modify <%=result[0].name %> Details To Update: -</h3>
+				<div>
+				<label>Name:</label>
+				<input type="text" name="name" class="input2" value=<%= result[0].name %>>
+				</div>
+				<div>
+				<label>ID:</label>
+				<input type="number" name="id" class="input2" value=<%= result[0].id %>>
+				</div>
+				<div>
+				<label>Salary:</label>
+				<input type="text" name="salary" class="input3" value=<%= result[0].salary %>>
+				</div>
+				<div>
+				<label>Age:</label>
+				<input type="number" name="age" class="input4" value=<%= result[0].age %>>
+				</div>
+				<div>
+				<label>Phone:</label>
+				<input type="number" name="phone" class="input5" value=<%= result[0].phone %>>
+				</div>
+				<div>
+				<input class="btn btn-primary" type="submit" value="Update"/>
+		        </div>
+	        </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<a  href="/"><button class="home">Back TO Home</button></a>
+	<h2>Inserted data</h2>
+	<div>
+		<table border="1" bgcolor="lightblue">
+			<tr>
+				<th>Name</th>
+				<th>Id</th>
+				<th>Age</th>
+				<th>Salary</th>
+				<th>phone</th>
+			</tr>
+			<tr>
+				<td><%= userdata.name %></td>
+				<td><%= userdata.id %></td>
+				<td><%= userdata.age %></td>
+				<td><%= userdata.salary %></td>
+				<td><%= userdata.phone %></td>
+			</tr>
+			
+		</table>
+	</div>
+	<style type="text/css">
+		.home{
+			position: absolute;
+    		margin-left: 70rem;
+            background-color: #FFB6C1;
+    		color: red;
+            font-size: 20px;
+            width: 15%;
+            height: 40px;
+    	}
+	</style>
+</body>
+</html>
